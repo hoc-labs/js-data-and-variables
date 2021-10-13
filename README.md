@@ -1,6 +1,13 @@
 # JavaScript - Data & Variables
 
-The following online JavaScript curriculum is a good reference when you need further help with any of these concepts. 
+## Overview
+There are three sections that contain the work for this assignment:
+* [Data & Variables Fundamentals/Exercises](#data--variables-fundamentalsexercises)
+* [Launch Code Exercise](#launch-code-exercise)
+* [Launch Code Studio](#launch-code-studio)
+
+
+The following online JavaScript curriculum is a good reference when you need further help with any of the JavaScript concepts, or the Launch Code Exercise/Studio. 
 
 [Launch Code - Data & Variables](https://education.launchcode.org/intro-to-professional-web-dev/chapters/data-and-variables/index.html)
 
