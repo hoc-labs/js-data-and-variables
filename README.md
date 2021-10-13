@@ -227,58 +227,18 @@ program and which are there to confuse you.
 
 ## Launch Code Exercise
 
-Do the exercise in the launch-code-exercise folder. The directions are in the script.js file.
-
-If you need help, you can check your solution [here](https://education.launchcode.org/intro-to-professional-web-dev/appendices/exercise-solutions/data-and-variables.html#data-and-variables-exercise-solutionse).
+Do [this exercise](https://education.launchcode.org/intro-to-professional-web-dev/chapters/data-and-variables/exercises.html) from Launch Code.
 
 ## Launch Code Studio
 
-Do the exercise in the launch-code-studio folder. The directions are in the script.js file.
-
-The following is the output that the script should write to the console.
+Do [this exercise](https://education.launchcode.org/intro-to-professional-web-dev/chapters/data-and-variables/studio.html) from Launch Code.
 
 This is a really good exercise to practice using some of the VS Code short-cuts for multi-edit cursors.
-* Copy and paste the sample output as your starting output.
-* Use tAlt-Shift . and drag down the left edge and add console.log(" to each line.
-* Use Atl . to select the end of each line and then add ");
+* Copy and paste the sample output as your starting output. 
+* The goal is to change each line to a console.log() call.
+* Use `Alt-Shift .` and drag down the left edge and add console.log(" to each line.
+* Use `Atl .` to select the end of each line and then add ");
+* Then start plugging in your variables..
 
-
-```
--------------------------------------
-> LC04 - LAUNCH CHECKLIST
--------------------------------------
-Date: Monday 2019-03-18
-Time: 10:05:34 AM
-
--------------------------------------
-> ASTRONAUT INFO
--------------------------------------
-* count: 7
-* status: ready
-
--------------------------------------
-> FUEL DATA
--------------------------------------
-* Fuel temp celsius: -225 C
-* Fuel level: 100%
-
--------------------------------------
-> MASS DATA
--------------------------------------
-* Crew mass: 564.9 kg
-* Fuel mass: 760000 kg
-* Shuttle mass: 74842.31 kg
-* Total mass: 835407.21 kg
-
--------------------------------------
-> FLIGHT PLAN
--------------------------------------
-* weather: clear
-
--------------------------------------
-> OVERALL STATUS
--------------------------------------
-* Clear for takeoff: YES
-```
 
 
