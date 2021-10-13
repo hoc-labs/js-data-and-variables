@@ -27,10 +27,8 @@ You will need
    - having trouble updating?
      - try this:
        `$ npm uninstall -g study-lenses && npm install -g study-lenses`
-2. Fork and clone this repository:
-   1. fork the HackYourFuture repository to your personal account
-      - [https://github.com/hoc-labs/js-data-and-variables](https://github.com/hoc-labs/js-data-and-variables)
-   2. clone your fork to your computer
+2. Fork and clone this repository to your local computer.
+    - [https://github.com/hoc-labs/js-data-and-variables](https://github.com/hoc-labs/js-data-and-variables)
 3. Run the `study` command from your CLI in the root of your root folder.
    - `$ study`
 4. The material will open in your default browser, you're good to go!
