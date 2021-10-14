@@ -649,6 +649,322 @@ console.log('a' + 'bc1' + '23'); // 'abc123'
 
 </details>
 
+## String Methods
+
+_String methods_ come built into JavaScript and are very useful for modifying
+your data. There are many string methods in JS, but you'll only need these for
+Welcome to JS:
+
+<details>
+<summary>🥚 .toLowerCase and .toUpperCase</summary>
+
+```js
+'use strict';
+console.log('-- .toLowerCase and .toUpperCase --');
+
+// returns a new string with all lower case letters
+console.log('HackYourFuture'.toLowerCase()); // 'hackyourfuture'
+
+// returns a new string with all upper case letters
+console.log('HackYourFuture'.toUpperCase()); // 'HACKYOURFUTURE'
+```
+
+</details>
+<details>
+<summary>🥚 .includes</summary>
+
+```js
+'use strict';
+console.log('-- .includes --');
+
+// returns true or false
+//  true: if the string includes the argument
+//  false: if it does not
+// upper/lower case matters
+console.log('Abc'.includes('Ab')); // true
+console.log('Abc'.includes('bc')); // true
+console.log('Abc'.includes('ab')); // false
+console.log('Abc'.includes('BC')); // false
+```
+
+</details>
+<details>
+<summary>🥚 .replaceAll</summary>
+
+```js
+'use strict';
+console.log('-- .replaceAll --');
+
+// returns a new string with the first argument replaced by the second
+console.log('abc'.replaceAll('b', '')); // 'ac'
+console.log('computers'.replaceAll('z', '!')); // 'computers'
+console.log('hi from me, hi to you'.replaceAll('hi', 'bye')); // 'bye from me, bye to you'
+```
+
+</details>
+<details>
+<summary>🥚 .trim</summary>
+
+```js
+'use strict';
+console.log('-- .trim --');
+
+// returns a new string with all the white space removed from the ends
+console.log('  hello  '.trim()); // 'hello'
+console.log('  hello'.trim()); // 'hello'
+console.log('hello  '.trim()); // 'hello'
+```
+
+</details>
+
+---
+
+## Characters in a String
+
+A string is made up of individual characters. You can find out how many
+characters are in a string, or access each character individually.
+
+<details>
+<summary>🥚 .length</summary>
+
+```js
+'use strict';
+console.log('-- .length --');
+
+// out how many characters are in a string
+console.log(''.length); // 0
+console.log('a'.length); // 1
+console.log('ab'.length); // 2
+console.log('abc'.length); // 3
+```
+
+</details>
+<details>
+<summary>🥚 character indexes</summary>
+
+```js
+'use strict';
+console.log('-- character indexes --');
+
+// get a specific character from a string
+//  careful, the first character is [0]!
+console.log('abc'[-1]); // undefined
+console.log('abc'[0]); // 'a'
+console.log('abc'[1]); // 'b'
+console.log('abc'[2]); // 'c'
+console.log('abc'[3]); // undefined
+```
+
+</details>
+<details>
+<summary>🐣 .indexOf</summary>
+
+```js
+'use strict';
+console.log('-- strings: .indexOf --');
+
+console.log('single characters');
+// returns the index of a substring inside a string
+console.log('abc'.indexOf('a')); // 0
+console.log('abc'.indexOf('b')); // 1
+console.log('abc'.indexOf('c')); // 2
+
+console.log('the empty string');
+// everything contains the empty string at index 0
+console.log(''.indexOf('')); // 0
+console.log('abc'.indexOf('')); // 0
+console.log('abc...xyz'.indexOf('')); // 0
+
+console.log('multiple characters');
+// you can search for more than one character
+console.log('toads'.indexOf('ds')); // 3
+console.log('abc'.indexOf('abc')); // 0
+
+console.log('does not exist');
+// if the search does not exist, indexOf returns -1
+console.log('asdf'.indexOf('x')); // -1
+console.log('JavaScript'.indexOf('Python')); // -1
+console.log(''.indexOf('hello')); // -1
+```
+
+</details>
+<details>
+<summary>🐣 .slice</summary>
+
+```js
+'use strict';
+console.log('-- strings: .slice --');
+
+console.log('one argument');
+// when you pass in only one number
+//  .slice returns the rest of the string from that index
+console.log('abcd'.slice(0)); // 'abcd'
+console.log('abcd'.slice(1)); //  'bcd'
+console.log('abcd'.slice(2)); //   'cd'
+console.log('abcd'.slice(3)); //    'd'
+console.log('abcd'.slice(5)); // undefined
+
+console.log('two arguments');
+// when you pass in two numbers
+//  .slice returns the characters from the first index to the second
+console.log('abcd'.slice(0, 4)); // 'abcd'
+console.log('abcd'.slice(1, 4)); //  'bcd'
+console.log('abcd'.slice(1, 3)); //  'bc'
+console.log('abcd'.slice(2, 3)); //   'c'
+console.log('abcd'.slice(2, 2)); // undefined
+
+console.log('negative arguments');
+// when you pass negative numbers
+//  the array indexes are counted backwards from the end of the string
+console.log('abcd'.slice(-1)); //   'd'
+console.log('abcd'.slice(-2)); //  'cd'
+console.log('abcd'.slice(-3)); // 'bcd'
+console.log('abcd'.slice(-4, -1)); // 'abc'
+console.log('abcd'.slice(-3, -1)); //  'bc'
+console.log('abcd'.slice(-3, -2)); //  'b'
+```
+
+</details>
+
+## Practice Problems
+
+<details>
+<summary>Changing Case</summary>
+
+```js
+'use strict';
+
+// fill in the _ to complete the exercises
+
+console.log('Xyz'._()); // 'xyz'
+console.log('xyZ'._()); // 'XYZ'
+
+// find 4 different ways to create each value using a string method
+
+console.log(); // 'apple'
+console.log(); // 'apple'
+console.log(); // 'apple'
+console.log(); // 'apple'
+
+console.log(); // 'PIE'
+console.log(); // 'PIE'
+console.log(); // 'PIE'
+console.log(); // 'PIE'
+```
+</details>
+
+<details>
+<summary>Character Index</summary>
+
+```js
+'use strict';
+
+console.log('-- accessing characters in a string by index --');
+
+// examples
+console.log('eat'.length); // 3
+
+console.log('eat'[0]); // 'e'
+console.log('eat'[1]); // 'a'
+console.log('eat'[2]); // 'l'
+
+console.log('eat'[0] === 'e'); // true
+console.log('eat'[1] === 'a'); // true
+console.log('eat'[2] === 't'); // true
+
+// exercises
+console.log('JavaScript'.length === _); // true
+console.log('JavaScript'[_]); // 't'
+console.log('JavaScript'[_]); // 'J'
+console.log('JavaScript'[_] === 'v'); // true
+console.log('JavaScript'[_] === 'c'); // true
+
+console.log('programming'.length === _); // true
+console.log('programming'[_]); // 'm'
+console.log('programming'[_]); // 'm'
+console.log('programming'[0] === _); // true
+console.log('programming'[4] === _); // true
+console.log('programming'[6] === _); // true
+console.log('programming'[10] === _); // true
+```
+</details>
+
+<details>
+<summary>Includes</summary>
+
+```js
+'use strict';
+
+console.log('-- using .includes for case-sensitive searching --');
+
+// examples
+console.log('JavaScript'.includes('script')); // false
+console.log('JavaScript'.includes('Script')); // true
+console.log('JavaScript'.includes('vaSc')); // true
+console.log('JavaScript'.includes('VAsC')); // false
+
+// exercises
+console.log('HackYourFuture'.includes(_)); // true
+console.log('HackYourFuture'.includes(_)); // true
+console.log('HackYourFuture'.includes(_)); // true
+
+console.log('HackYourFuture'.includes(_)); // false
+console.log('HackYourFuture'.includes(_)); // false
+console.log('HackYourFuture'.includes(_)); // false
+
+console.oog(_.includes(' Bye')); // true
+console.oog(_.includes('. Car')); // true
+console.oog(_.includes('+')); // true
+
+console.oog(_.includes('hi')); // false
+console.oog(_.includes('road')); // false
+console.oog(_.includes('Ima')); // false
+```
+</details>
+
+<details>
+<summary>Searching Strings</summary>
+
+```js
+'use strict';
+
+// combining .toUpperCase or .toLowerCase with .includes is helpful
+//  you can now search strings without worrying about upper or lower case
+
+console.log('-- case insensitive string searches --');
+
+// examples
+console.log('JavaScript'.toLowerCase().includes('script')); // true
+console.log('JAVASCRIPT'.toLowerCase().includes('script')); // true
+console.log('javascript'.toLowerCase().includes('script')); // true
+
+console.log('JavaScript'.toUpperCase().includes('SCRIPT')); // true
+console.log('JAVASCRIPT'.toUpperCase().includes('SCRIPT')); // true
+console.log('javascript'.toUpperCase().includes('SCRIPT')); // true
+
+// exercises
+//  fill in the blanks with something that will evaluate to true
+//  there's many different answers! how many can you find?
+
+console.log('PassPort'.toLowerCase().includes(_)); // true
+console.log('hACK YouR FuTuRE'.toLowerCase().includes(_)); // true
+console.log('_Robin_Batman'.toLowerCase().includes(_)); // true
+
+console.log('PassPort'.toUpperCase().includes(_)); // false
+console.log('hACK YouR FuTuRE'.toUpperCase().includes(_)); // false
+console.log('_Robin_Batman'.toUpperCase().includes(_)); // false
+
+console.log(_.toLowerCase().includes('tim')); // true
+console.log(_.toLowerCase().includes('o w')); // true
+console.log(_.toLowerCase().includes('. e')); // true
+
+console.log(_.toUpperCase().includes('TIM')); // true
+console.log(_.toUpperCase().includes('O W')); // true
+console.log(_.toUpperCase().includes('. E')); // true
+
+```
+</details>
+
 ---
 # Undefined
 
@@ -2271,3 +2587,763 @@ console.log(_);
 
 </details>
 
+---
+
+# Block Scope
+
+Curly braces create a new _block scope_. There are lots of great explanations of
+block scope out there, but let's see if you can come up with your own after
+studying these examples.
+
+```js
+'use strict';
+console.log('-- block scope --');
+
+{
+  let innerVariable = 'not available outside the curly braces';
+}
+innerVariable; // ReferenceError
+```
+
+<details>
+<summary>🥚 inner and outer scope</summary>
+
+```js
+'use strict';
+console.log('-- block scope: inner and outer scope --');
+
+let outerVariable = 'declared outside';
+console.log(outerVariable); // 'declared outside'
+
+// begin a new block scope
+{
+  // variables declared outside of curly are available inside the curly braces
+  outerVariable = 'assigned inside';
+  console.log(outerVariable); // 'assigned inside'
+
+  let innerVariable = 'declared inside';
+  console.log(innerVariable); // 'declared inside'
+}
+
+// changes made inside the scope stay when you leave the scope
+console.log(outerVariable); // 'assigned inside'
+```
+
+</details>
+<details>
+<summary>🥚 shadowing</summary>
+
+```js
+'use strict';
+console.log('-- block scope: shadowing --');
+
+// shadowing is when you declare a variable inside a scope
+//  that has the same name as a variable in the outer scope
+
+// you should avoid variable shadowing
+//  it makes your code harder to understand
+
+let favoriteTree = 'palm';
+console.log(favoriteTree); // 'palm'
+{
+  // the outer variable is "replaced" inside by the new variable
+  // it's no longer possible to modify the outer variable from the inner scope
+  let favoriteTree = 'date'; // no error!
+  console.log(favoriteTree); // 'date'
+
+  favoriteTree = 'cedar';
+  console.log(favoriteTree); // 'cedar'
+}
+console.log(favoriteTree); // 'palm'
+```
+
+</details>
+
+---
+
+## Block Scope Errors
+
+Scopes are useful for making your programs easy to read, understand and debug,
+but now you can make some mistakes that weren't possible before:
+
+<details>
+<summary>🥚 declaring in a scope, using out of scope</summary>
+
+```js
+'use strict';
+console.log('-- declaring in a scope, using out of scope --');
+
+// begin a new block scope
+{
+  let innerVariable = 'declared inside';
+  console.log(innerVariable); // 'declared inside'
+}
+
+// variables declared in the inner scope are NOT available outside the scope
+console.log(innerVariable); // ReferenceError
+```
+
+## </details>
+
+## Nested Scopes
+
+You can create scopes inside of scopes. This is common in control flow, for
+example when you nest conditionals inside loops (more on this in the coming
+chapters).
+
+<details>
+<summary>🥚 nested scopes</summary>
+
+```js
+'use strict';
+// hint: try the 'variables' button
+console.log('-- nested scopes --');
+
+let outer = 'a';
+{
+  let inner = '-';
+  {
+    let innerInner = 'b';
+    outer = outer + inner + innerInner;
+  }
+  {
+    let innerInner = 'c';
+    outer = outer + inner + innerInner;
+  }
+  outer = inner + outer + inner;
+}
+console.log(outer); // '-a-b-c-'
+```
+
+</details>
+
+---
+
+## Tracing Blocks
+
+When you trace code with block scopes you need to pay extra attention to when a
+scope begins and when a scope ends.
+
+The _steps_ trace table has an option for "enter scope" and "leave scope", you
+can use these without a name to to show that when a new scope has opened or
+closed. Any variable that was declared inside the block is _scoped_ to that
+block.
+
+## Practice Problems
+
+<details>
+<summary>trace - inner-outer</summary>
+
+```js
+'use strict';
+
+let greeting = 'hello';
+
+{
+  let newGreeting = 'bye';
+  greeting = newGreeting;
+}
+
+console.log(greeting === 'bye');
+```
+
+</details>
+
+<details>
+<summary>trace - phrase</summary>
+
+```js
+'use strict';
+
+let phrase = '';
+
+{
+  let word = 'hello';
+  phrase = phrase + word;
+}
+
+{
+  let word = 'world';
+  phrase = phrase + ' ' + word;
+}
+
+console.log(phrase === 'hello world'); // true
+```
+</details>
+
+<details>
+<summary>trace - shadow</summary>
+
+```js
+'use strict';
+
+let greeting = 'hello';
+
+{
+  let greeting = 'hello';
+  greeting = 'bye';
+  console.log(greeting);
+}
+
+console.log(greeting === 'hello'); // true
+```
+</details>
+
+<details>
+<summary>parsons</summary>
+
+```js
+'use strict';
+
+/* this exercise has 2 extra lines */
+/* parsons-collapse: hint
+  1. declare and initialize greeting
+  2. enter a new scope
+    a. declare a new greeting
+    b. assign the new greeting's value to the greeting
+  3. compare greeting to 'bye'
+*/
+
+let greeting = 'hello';
+
+{
+  let newGreeting = 'bye';
+  greeting = newGreeting;
+}
+
+console.log(greeting === 'bye');
+
+// ------------
+
+let greeting = newGreeting; // distractor
+let newGreeting = 'bye'; // distractor
+```
+</details>
+
+# Conditionals
+
+```js
+'use strict';
+console.log('-- conditionals --');
+
+let isLeftHanded = confirm('are you left handed?');
+
+if (isLeftHanded) {
+  alert('you are left handed');
+} else {
+  alert('you are not left handed');
+}
+```
+
+<details>
+<summary>🥚 if</summary>
+
+```js
+'use strict';
+console.log('-- if --');
+
+let input = prompt("please don't cancel");
+
+let response = '';
+if (input === null) {
+  // enter this block if the condition is true
+  response = 'you are a canceler';
+}
+
+alert(response);
+```
+
+</details>
+<details>
+<summary>🥚 if else</summary>
+
+```js
+'use strict';
+console.log('--  if else  --');
+
+let input = prompt("please don't cancel");
+
+let response = '';
+if (input === null) {
+  // enter this block if the condition is true
+  response = 'you are a canceler';
+} else {
+  // enter this block if the condition is false
+  response = input;
+}
+
+alert(response);
+```
+
+</details>
+<details>
+<summary>🥚 if else if else</summary>
+
+```js
+'use strict';
+console.log('-- if else if else --');
+
+let input = prompt('enter something');
+
+let response = '';
+if (input === null) {
+  // enter this block if the first condition is true
+  response = 'you are a canceler';
+} else if (input === '') {
+  // enter this block if the second condition is true
+  response = 'come on, type something';
+} else {
+  // enter this block if all conditions are false
+  response = '"' + input + '" is something';
+}
+
+alert(response);
+```
+
+</details>
+
+---
+
+## Execution Paths
+
+Code using conditionals has more than one _execution path_. An execution path is
+the specific lines of code that are executed when you run the program. This
+means that you can no longer just read a program from top to bottom to
+understand how it works, different values in a program can mean that different
+lines will execute!
+
+Creating trace tables, and using the `trace` or `openIn` buttons will help you
+understand how programs with conditionals behave.
+
+<details>
+<summary>🥚 2 paths: if else</summary>
+
+```js
+'use strict';
+console.log('-- 2 paths: if else --');
+
+let input = prompt('enter something');
+
+let path = '';
+if (input === null) {
+  path = 'a';
+} else {
+  path = 'b';
+}
+
+alert(path);
+```
+
+</details>
+<details>
+<summary>🥚 3 paths: if else if else</summary>
+
+```js
+'use strict';
+console.log('-- 3 paths: if else if else --');
+
+let input = prompt('enter something');
+
+let path = '';
+if (input === null) {
+  path = 'a';
+} else if (input === '') {
+  path = 'b';
+} else {
+  path = 'c';
+}
+
+alert(path);
+```
+
+</details>
+<details>
+<summary>🥚 4 paths: nested</summary>
+
+```js
+'use strict';
+console.log('-- 4 paths: nested --');
+
+let input = prompt('enter "something"');
+
+let path = '';
+if (input !== null) {
+  path = 'a';
+  if (input === '') {
+    path = path + '1';
+  } else if (input === 'something') {
+    path = path + '2';
+  } else {
+    path = path + '3';
+  }
+} else {
+  path = 'b';
+}
+
+alert(path);
+```
+
+</details>
+
+---
+
+## Nested Conditionals
+
+Programs with more execution paths are more complex to understand, but can also
+have a more interesting user experience. One way to write more interesting
+programs is to use _nested conditionals_ (conditionals inside of conditionals)
+
+<details>
+<summary>🐣 memory game</summary>
+
+```js
+'use strict';
+console.log('-- memory game --');
+
+let thingToRemember = prompt(
+  'enter some text, then remember it.\n\n' +
+    'if you remember it correctly you win',
+);
+
+if (thingToRemember !== null) {
+  let displayTheText = confirm(
+    'would you like to see your text one more time?',
+  );
+  if (displayTheText) {
+    alert(thingToRemember);
+  }
+  let guess = prompt('now try to remember what it was:');
+  if (guess !== null) {
+    if (guess === thingToRemember) {
+      alert('you win!');
+    } else {
+      alert('try again.');
+    }
+  }
+}
+
+alert('good bye');
+```
+
+</details>
+
+---
+
+## Trace Exercises
+
+There will be two kinds of tracing exercises from now on, **interactive** and
+**not interactive**. Each will help you explore the different _execution paths_
+of a program.
+
+The **interactive** trace exercises will use `prompt`, `alert` and `confirm` to
+introduce different values into your program.
+
+The **not interactive** exercises will have a few variable declarations at the
+top of the file with different initial values. You can comment and uncomment the
+variables to see how the program behaves with different values:
+
+<details>
+<summary>🥚 example not-interactive exercise</summary>
+
+```js
+'use strict';
+let value = -1;
+// let value = -0.5;
+// let value = 0;
+// let value = 0.5;
+// let value = 1;
+
+let message;
+if (value < 0) {
+  message = 'too small';
+} else if (value === 0) {
+  message = 'perfect';
+} else if (value > 0) {
+  message = 'too big';
+} else {
+  message = 'this path is unreachable!';
+}
+
+console.log(message);
+```
+
+</details>
+
+## Practice Problems
+
+<details>
+<summary>trace - interactive 1</summary>
+
+```js
+'use strict';
+
+let input = prompt('enter something with "ear" in it');
+
+let message;
+if (input === null) {
+  message = 'you canceled';
+} else {
+  if (input.includes('ear')) {
+    message = 'eary!';
+  } else {
+    message = 'not eary :(';
+  }
+}
+
+alert(message);
+```
+</details>
+
+<details>
+<summary>trace - interactive 2</summary>
+
+```js
+'use strict';
+
+let input = prompt('enter something with "ear" in it');
+
+let message;
+if (input !== null) {
+  if (input.includes('ear')) {
+    message = 'eary!';
+  } else {
+    message = 'not eary :(';
+  }
+} else {
+  message = 'you canceled';
+}
+
+alert(message);
+```
+</details>
+
+<details>
+<summary>trace - interactive 3</summary>
+
+```js
+'use strict';
+
+let didConfirm = confirm('yes?');
+
+let message;
+if (didConfirm) {
+  message = 'ok';
+} else {
+  message = 'no';
+}
+
+alert(message);
+
+```
+</details>
+
+<details>
+<summary>trace - interactive 4</summary>
+
+```js
+'use strict';
+
+let didConfirm = confirm('yes?');
+
+let message;
+if (didConfirm === false) {
+  message = 'no';
+} else {
+  message = 'ok';
+}
+
+alert(message);
+```
+</details>
+
+<details>
+<summary>trace - non-interactive 1</summary>
+
+```js
+'use strict';
+
+let word = '';
+// let word = 'a';
+// let word = 'be';
+// let word = 'eat';
+// let word = 'ear';
+// let word = 'peat';
+// let word = 'bear';
+// let word = 'early';
+// let word = 'burly';
+// let word = 'pearly';
+// let word = 'poultry';
+
+let message;
+if (word.length >= 3) {
+  if (word.includes('ear')) {
+    message = 'eary word!';
+  } else {
+    message = 'not eary :(';
+  }
+} else {
+  message = 'word is too short';
+}
+
+console.log(message);
+
+```
+</details>
+
+<details>
+<summary>trace - non-interactive 2</summary>
+
+```js
+'use strict';
+
+let word = 'a';
+// let word = 'be';
+// let word = 'sea';
+// let word = 'frog';
+// let word = 'apple';
+// let word = 'banana';
+
+let message;
+if (word.length <= 2) {
+  message = 'a short word';
+} else if (word.length < 3) {
+  // why is this path unreachable?
+  message = 'unreachable path!';
+} else if (word.length < 5) {
+  message = 'a perfect word';
+} else {
+  message = 'a long word';
+}
+
+console.log(message);
+
+```
+</details>
+
+<details>
+<summary>write me - 1</summary>
+
+```js
+'use strict';
+
+let input = prompt('enter anything longer than 5 characters');
+
+let message;
+if (input === null) {
+  message = 'you canceled :(';
+} else if (input.length < 5) {
+  message = 'too short';
+} else if (input.length > 5) {
+  message = 'long enough';
+} else {
+  message = 'exactly 5!';
+}
+
+alert(message);
+```
+
+</details>
+
+<details>
+<summary>write me - 2</summary>
+
+```js
+'use strict';
+
+let input = prompt('enter anything longer than 5 characters');
+
+let message;
+if (input !== null) {
+  if (input.length < 5) {
+    message = 'too short';
+  } else if (input.length > 5) {
+    message = 'long enough';
+  } else {
+    message = 'exactly 5!';
+  }
+} else {
+  message = 'you canceled :(';
+}
+```
+</details>
+
+<details>
+<summary>write me - 3</summary>
+
+```js
+'use strict';
+
+let input = prompt('enter anything longer than 5 characters');
+
+let message;
+if (input === null) {
+  message = 'you canceled :(';
+} else {
+  if (input.length < 5) {
+    message = 'too short';
+  } else if (input.length > 5) {
+    message = 'long enough';
+  } else {
+    message = 'exactly 5!';
+  }
+}
+```
+</details>
+
+<details>
+<summary>write me - 4</summary>
+
+```js
+'use strict';
+
+let input = prompt('enter anything longer than 5 characters');
+
+let message;
+if (input === null) {
+  message = 'you canceled :(';
+} else if (input.length === 5) {
+  message = 'exactly 5!';
+} else if (input.length > 5) {
+  message = 'long enough';
+} else {
+  message = 'too short';
+}
+
+alert(message);
+```
+</details>
+
+<details>
+<summary>parsons - 1</summary>
+
+```js
+'use strict';
+
+/* this exercise has 3 extra lines */
+
+/* parsons-collapse: hint
+  1. gather input
+  2. alert a reaction
+    a. sad, they canceled
+    b. incorrect
+    c. correct
+*/
+
+let input = prompt('something longer than 4 characters:');
+
+if (input === null) {
+  alert(':(');
+} else if (input.length <= 4) {
+  alert('too short!');
+} else {
+  alert('perfect');
+}
+
+// ---- --------------
+
+alert(too short!); // distractor
+} else if (input.length < 4) { //distractor
+if (input !== null) { // distractor
+
+```
+</details>
