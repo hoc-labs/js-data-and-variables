@@ -1,4 +1,7 @@
-# 🥚 Comments and Logs
+# Comments and Logs
+
+- [Launch Code - Comments](https://education.launchcode.org/intro-to-professional-web-dev/chapters/how-to-write-code/comments.html)
+- [Launch Code - Console](https://education.launchcode.org/intro-to-professional-web-dev/chapters/how-to-write-code/output.html)
 
 Comments and logs are for developers, not for the computer. They exist to help
 you understand your program.
@@ -45,7 +48,10 @@ console.log('a', 'message', 'from', 'beyond'); // 'a', 'message', 'from', 'beyon
 
 ---
 
-# 🥚 Primitive Values
+# Primitive Values
+- [Launch Code - Value and Data Types](https://education.launchcode.org/intro-to-professional-web-dev/chapters/data-and-variables/values-and-data-types.html)
+- [Launch Code - null, undefined](https://education.launchcode.org/intro-to-professional-web-dev/chapters/more-on-types/specialtypes.html)
+- [Launch Code - strings, numbers](https://education.launchcode.org/intro-to-professional-web-dev/chapters/data-and-variables/values-and-data-types.html#more-on-strings)
 
 Programming computers is all about processing _data_. Data comes into a program,
 your program processes the data, and some new data comes out at the end. In
@@ -87,6 +93,10 @@ console.log(-12);
 ---
 # Operators
 
+- [Launch Code - Operators](https://education.launchcode.org/intro-to-professional-web-dev/chapters/data-and-variables/operations.html)
+- [Launch Code - Strict Equality](https://education.launchcode.org/intro-to-professional-web-dev/chapters/booleans-and-conditionals/equality.html#strict-equality-with)
+- [Launch Code - `+` operator](https://education.launchcode.org/intro-to-professional-web-dev/chapters/data-and-variables/other-operators.html#the-string-operator)
+  
 Operators are what you use to process or change the data in your programs.
 Operators take in values, do something, and return a new value. Each operator
 has it's own rules about what it does and how it does it. To understand an
@@ -360,6 +370,8 @@ console.log(typeof _); // 'number'
 ---
 # Booleans
 
+[Launch Code - Booleans](https://education.launchcode.org/intro-to-professional-web-dev/chapters/booleans-and-conditionals/booleans.html)
+
 A primitive type with two values: `true` and `false`.
 
 These are helpful for making decisions in your programs, it's like asking `yes`
@@ -537,6 +549,8 @@ console.log(_ || _); // true
 
 ---
 # Strings
+- [Launch Code - strings](https://education.launchcode.org/intro-to-professional-web-dev/chapters/data-and-variables/values-and-data-types.html#more-on-strings)
+- [Launch Code - String methods](https://education.launchcode.org/intro-to-professional-web-dev/chapters/strings/string-methods.html)
 
 A primitive type used for saving and working with text. A string is anything
 wrapped in quotes: `'something'` or `"something"`:
@@ -609,7 +623,7 @@ console.log('hello' === 100); // false
 
 </details>
 <details>
-<summary>🥚 strict unequality</summary>
+<summary>🥚 strict inequality</summary>
 
 ```js
 'use strict';
@@ -968,6 +982,8 @@ console.log(_.toUpperCase().includes('. E')); // true
 ---
 # Undefined
 
+[Launch Code - undefined](https://education.launchcode.org/intro-to-professional-web-dev/chapters/more-on-types/specialtypes.html)
+
 A primitive type used to show that there is no value.
 
 ```js
@@ -1029,7 +1045,9 @@ about that in the next folder.
 
 ---
 # Variables
-
+- [Launch Code - Variables](https://education.launchcode.org/intro-to-professional-web-dev/chapters/data-and-variables/variables.html)
+- [Launch Code - Variable Naming](https://education.launchcode.org/intro-to-professional-web-dev/chapters/data-and-variables/more-on-variables.html#naming-variables)
+- 
 Variables allow you to save values to use later in your program.
 
 They're kind of like a box that can only hold one thing at a time.
@@ -2071,6 +2089,8 @@ program are `"x"` and `undefined`.
 
 # Null
 
+[Launch Code - null](https://education.launchcode.org/intro-to-professional-web-dev/chapters/more-on-types/specialtypes.html)
+
 Another primitive type used to represent nothing.
 
 ```js
@@ -2305,7 +2325,8 @@ if (didConfirm) {
 
 ---
 # Numbers
-
+- [Launch Code - Numbers](https://education.launchcode.org/intro-to-professional-web-dev/chapters/data-and-variables/values-and-data-types.html#more-on-numbers)
+- 
 A primitive type used to represent numbers. The programs in this module used
 mostly strings, but there will be few numbers.
 
@@ -2590,7 +2611,8 @@ console.log(_);
 ---
 
 # Block Scope
-
+- [Launch Code - Scope](https://education.launchcode.org/intro-to-professional-web-dev/chapters/scope/index.html)
+- 
 Curly braces create a new _block scope_. There are lots of great explanations of
 block scope out there, but let's see if you can come up with your own after
 studying these examples.
@@ -2821,7 +2843,9 @@ let newGreeting = 'bye'; // distractor
 </details>
 
 # Conditionals
-
+- [Launch Code - Conditionals](https://education.launchcode.org/intro-to-professional-web-dev/chapters/booleans-and-conditionals/conditionals.html)
+- [Launch Code - Nested Conditionals](https://education.launchcode.org/intro-to-professional-web-dev/chapters/booleans-and-conditionals/nested-conditionals.html)
+  
 ```js
 'use strict';
 console.log('-- conditionals --');
@@ -3347,3 +3371,1372 @@ if (input !== null) { // distractor
 
 ```
 </details>
+
+# While Loops
+
+While loops allow you to write a block of code that will repeat _while_ a
+condition is true. The condition in a while loop is very similar to a
+conditional, if the value in the parenthesis is true the block of code will be
+executed.
+
+The major difference between a while loop and a conditional is that a
+conditional will only test the value once. A while loop will test the value as
+many times as necessary until it is false.
+
+```js
+'use strict';
+console.log('-- while --');
+
+let input = null;
+while (input === null) {
+  input = prompt('do not cancel');
+}
+
+alert(input + '!');
+```
+
+<details>
+<summary>🥚 while null</summary>
+
+```js
+'use strict';
+console.log('-- while null --');
+
+let input = null;
+
+// continue prompting the user until they enter
+//  an empty string is ok, because it is not canceling
+while (input === null) {
+  input = prompt('do not cancel');
+}
+
+alert(input + '!');
+```
+
+</details>
+<details>
+<summary>🥚 while null or empty string</summary>
+
+```js
+'use strict';
+console.log('-- while null or empty string --');
+
+let input = null;
+
+// continue prompting the user until they enter something
+//  an empty string is not allowed!
+while (input === null || input === '') {
+  input = prompt('enter something');
+}
+
+alert(input + '!');
+```
+
+</details>
+<details>
+<summary>🥚 while not "bread"</summary>
+
+```js
+'use strict';
+console.log('-- while not "bread" --');
+
+let input = null;
+
+// continue prompting the user until they enter "bread"
+//  this loop is different because it finishes when the user's input IS a specific value
+//  the other loops ended when the user's input was NOT a specific value
+while (input !== 'bread') {
+  input = prompt('enter "bread"');
+}
+
+alert(input + '!');
+```
+
+</details>
+<details>
+<summary>🥚 while not "bread" and not "water"</summary>
+
+```js
+'use strict';
+console.log('-- while not "bread" or "water" --');
+
+let input = null;
+
+// continue prompting the user until they enter "bread" or "water"
+//  notice that this example use !== with &&, but the previous used === with ||
+while (input !== 'bread' && input !== 'water') {
+  input = prompt('enter "bread" or "water"');
+}
+
+alert(input + '!');
+```
+
+</details>
+
+---
+
+## Looping Strategies
+
+Here are two strategies you can use when writing `while` loops:
+
+### Logic in Condition
+
+Write the logic for your loop directly in the parenthesis of the `while` loop.
+This is good for loops where the logic is simple:
+
+<details>
+<summary>🥚 logic in condition</summary>
+
+```js
+'use strict';
+// yup, nothing new here
+// all of the examples so far have been written this way
+
+let input = null;
+while (input === null) {
+  input = prompt('do not cancel');
+}
+alert(input);
+```
+
+</details>
+
+### Boolean Flag
+
+Another strategy for writing for loops is to use _boolean flag variable_. A
+boolean flag is a variable that stores a boolean that you can set to `true` or
+`false` depending on what has happened in your program.
+
+Boolean flags are useful when the logic of your for loop is more complicated:
+
+<details>
+<summary>🐣 boolean flag</summary>
+
+```js
+'use strict';
+let input = '';
+let prompting = true;
+while (prompting) {
+  input = prompt(
+    'enter something longer than 4 characters, or "cancel" to leave',
+  );
+  if (input === null) {
+    prompting = false;
+    input = 'you canceled';
+  } else if (input.length > 4) {
+    prompting = false;
+  }
+}
+alert(input);
+```
+
+</details>
+
+---
+
+## Infinite Loops
+
+```js
+'use strict';
+console.log('-- while true --');
+
+// this is the simplest infinite loop
+//  while loops continue so long as the condition is true
+//  this condition is true and will never change!
+
+while (true) {
+  // the only way to end this loop is to close the browser tab
+  console.log('... forever ...');
+}
+```
+
+Sometimes you will write a loop that never ends. There's many ways to do this,
+and it will happen a lot while you're studying. It's easy to accidentally write
+an infinite loop, and hard to predict when it will happen.
+
+Some infinite loops are easy to find just by reading your code, others are
+trickier to guess. Check out the **[./infinite-loops](./infinite-loops)** folder
+to practice running and fixing infinite loops.
+
+### 🐣 Loop Guards
+
+One way to avoid infinite loops is to use _loop guards_.
+
+A loop guard is a little extra code in your program that throws an error if a
+loop repeats too many times. This kind of loop guard isn't something you'll use
+in your professional code, but it's very helpful while you're learning.
+
+<details>
+<summary>loop guard: 10 iterations</summary>
+
+```js
+'use strict';
+console.log('-- loop guard: 10 iterations --');
+
+let loopGuard = 0;
+while (true) {
+  loopGuard = loopGuard + 1;
+  if (loopGuard > 10) {
+    throw new RangeError('loopGuard exceeded 10 iterations');
+  }
+
+  console.log('(not) forever');
+}
+```
+
+</details>
+
+When you use the `?study` lens there is an option that will automatically add
+loop guards to your code when you run it. This way you can write your code
+without the extra code, and still have the security of a loop guard when you run
+it.
+
+---
+
+## No `else`
+
+```js
+'use strict';
+// this is not allowed in JS! you will get a syntax error
+//  it looks logical and useful, but does not exist
+
+let input = null;
+while (input === null) {
+  input = prompt('enter something');
+} else { // SyntaxError
+  alert('canceling is not allowed');
+}
+
+alert(input);
+```
+
+## Practice Problems
+
+<details>
+<summary> blanks - 1</summary>
+
+```js
+'use strict';
+
+let loggedIn = false;
+
+while (!loggedIn) {
+  let didAgree = confirm('do you agree to our terms of service?');
+  if (didAgree === true) {
+    loggedIn = true;
+  } else {
+    alert('not an option, you must agree');
+  }
+}
+
+alert('welcome to social media!');
+```
+
+</details>
+
+<details>
+<summary>blanks 2</summary>
+
+```js
+'use strict';
+
+let message = 'your favorite color is ';
+
+let isEmpty = true;
+while (isEmpty) {
+  let input = prompt('what is your favorite color?');
+
+  if (input === null) {
+    alert('there is no escape');
+  } else if (input.length === 0) {
+    alert('input cannot be empty');
+  } else {
+    message = message + input;
+    isEmpty = false;
+  }
+}
+
+alert(message);
+```
+
+</details>
+
+<details>
+<summary>blanks 3</summary>
+
+```js
+'use strict';
+
+let input = '';
+let prompting = true;
+while (prompting) {
+  input = prompt(
+    'enter something longer than 4 characters, or "cancel" to leave',
+  );
+  if (input === null) {
+    prompting = false;
+    input = 'you canceled';
+  } else if (input.length > 4) {
+    prompting = false;
+  }
+}
+alert(input);
+```
+</details>
+
+
+<details>
+<summary>infinite loops</summary>
+
+```js
+'use strict';
+
+let x = 0;
+
+while (x !== 9) {
+  x = x + 2;
+  console.log(x);
+}
+
+console.log('all done.');
+```
+</details>
+
+<details>
+<summary>parsons - 1</summary>
+
+```js
+'use strict';
+
+/* this exercise has 4 extra lines */
+
+let count = 1
+while (count < 10) {
+  count = count + 1
+  alert(count)
+}
+
+
+// ---------
+
+count = count - 1; // distractor
+count = 1; // distractor
+while (count = 10) { // distractor
+while (count) {
+```
+</details>
+
+<details>
+<summary>parsons 2</summary>
+
+```js
+'use strict';
+
+/* this exercise has 5 extra lines */
+
+let dots = '';
+while (dots.length < 5) {
+  dots = dots + '.';
+  alert(dots);
+}
+
+// ---------
+
+dots + '.'; // distractor
+while (dots.length !> 5) { // distractor
+while (dots.length !< 5) { // distractor
+} // distractor
+{ // distractor
+```
+</details>
+
+<details>
+<summary>parsons - 3</summary>
+
+```js
+'use strict';
+
+/* Boolean Flag Variable
+
+  Declare a variable with a boolean value and check it's value in the loop head
+  You can update the flag variable inside your while loop based on the user's input
+
+*/
+
+let flag = false;
+
+while (!flag) {
+  flag = confirm('you can only leave this loop if you confirm');
+}
+
+alert('you confirmed');
+
+// begin distractors
+
+while (flag) { // distractor
+flag = prompt('you can only leave this loop if you confirm'); // distractor
+flag = alert('you can only leave this loop if you confirm'); // distractor
+```
+</details>
+
+
+<details>
+<summary>parsons 4</summary>
+
+```js
+'use strict';
+
+/* this exercise has 3 distractors */
+
+let favoriteColor = null;
+while (favoriteColor === null) {
+  favoriteColor = prompt('please enter your favorite color');
+}
+
+alert('nice.  your favorite color is "' + favoriteColor + '"');
+
+
+// ----------
+
+while (favoriteColor = null) { // distractor
+while (favoriteColor !== null) { // distractor
+let favoriteColor = ''; // distractor
+```
+
+</details>
+
+
+<details>
+<summary>parsons 5</summary>
+
+```js
+'use strict';
+
+/* Logic in the Loop Head
+
+  write your loop logic directly in the while loop head
+
+  check something about your script's variables with each iteration.
+
+  this exercise has 3 extra lines
+*/
+
+let userInput = '';
+
+while (userInput === null || userInput === '') {
+  userInput = prompt('enter at least one character');
+}
+
+alert(userInput);
+
+
+// begin distractors
+
+while (userInput === null && userInput === '') { // distractor
+while (userInput !== null && userInput !== '') { // distractor
+while (userInput !== null || userInput !== '') { // distractor
+```
+
+</details>
+
+<details>
+<summary>trace 1</summary>
+
+```js
+'use strict';
+
+let word = 'racecar';
+// let word = 'bike';
+// let word = 'f';
+// let word = ' i o u ';
+// let word = 'done.';
+
+let reversed = '';
+
+let index = 0;
+while (word.length !== reversed.length) {
+  reversed = word[index] + reversed;
+  index++;
+}
+
+console.log(word, reversed);
+```
+
+</details>
+
+<details>
+<summary>trace 2</summary>
+
+```js
+'use strict';
+
+let word = 'racecar';
+// let word = 'bike';
+// let word = 'f';
+// let word = ' i o u ';
+// let word = 'done.';
+
+let reversed = '';
+
+let index = word.length - 1;
+while (index >= 0) {
+  reversed = reversed + word[index];
+  index--;
+}
+
+console.log(word, reversed);
+```
+
+</details>
+
+<details>
+<summary>write 1</summary>
+
+```js
+'use strict';
+
+let input = null;
+while (input === null) {
+  input = prompt('enter some text');
+}
+
+let repeated = '';
+let i = 0;
+while (i < input.length) {
+  repeated = repeated + '\n' + input;
+  i = i + 1;
+}
+
+alert(repeated);
+```
+</details>
+
+<details>
+<summary>write 2</summary>
+
+```js
+'use strict';
+
+let input = '';
+while (input !== null && input.length <= 4) {
+  input = prompt('enter something longer than 4 characters');
+}
+alert(input);
+```
+</details>
+
+# 🥚 `break`, `continue`
+
+`break` and `continue` are two JavaScript key words that you can use in your
+loops for _control flow_.
+
+- `break` will end the loop immediately, no matter what. the rest of the loop
+  body will not be executed
+- `continue` will skip the rest of the loop body and go back to check the
+  condition
+
+```js
+'use strict';
+let input = null;
+
+// normally while (true) would create an infinite loop
+//  you can use `break` to exit the loop, so it is not infinite
+while (true) {
+  input = prompt('enter something');
+
+  if (input === null) {
+    // if the user canceled, repeat the loop
+    //  the next conditional will be skipped
+    alert('there is no escape');
+    continue;
+  }
+
+  if (input !== '') {
+    // exit the loop completely
+    break;
+  }
+
+  alert('no empty text allowed');
+}
+
+alert(input + '!');
+```
+
+## Practice Problems
+
+<details>
+<summary>blanks 1</summary>
+
+```js
+'use strict';
+
+while (true) {
+  let didAgree = confirm('do you agree to our terms of service?');
+  if (didAgree === true) {
+    alert('welcome to social media!');
+    break;
+  }
+
+  alert('not an option, you must agree');
+}
+```
+</details>
+
+<details>
+<summary>blanks 2</summary>
+
+```js
+'use strict';
+
+let message = 'your favorite color is ';
+
+while (true) {
+  let input = prompt('what is your favorite color?');
+
+  if (input === null) {
+    alert('there is no escape');
+    continue;
+  }
+
+  let confirmed = confirm('is this correct? "' + input + '"');
+  if (confirmed) {
+    message = message + input;
+    break;
+  }
+}
+
+alert(message);
+```
+</details>
+
+<details>
+<summary>blanks 3</summary>
+
+```js
+'use strict';
+
+let input = '';
+
+while (true) {
+  input = prompt('enter something longer than 4 characters');
+
+  if (input === null) {
+    alert('there is no escape');
+    continue;
+  }
+
+  if (input.length <= 4) {
+    alert('your input is too short');
+    continue;
+  }
+
+  break;
+}
+
+alert(input);
+
+```
+</details>
+
+
+
+<details>
+<summary>parsons 1</summary>
+
+```js
+'use strict';
+
+/* there are 3 extra lines in this exercise */
+/* parsons-collapse: hint
+
+  your loop's condition should have no logic in it
+
+*/
+
+while (true) {
+  let userInput = prompt('enter something to leave this loop');
+
+  if (userInput !== null && userInput !== '') {
+    break;
+  }
+}
+
+alert('done!')
+
+
+// begin distractors
+
+while (false) { // distractor
+while (userInput !== null && userInput !== '') { // distractor
+continue; // distractor
+```
+</details>
+
+<details>
+<summary>trace 1</summary>
+
+```js
+'use strict';
+
+let number = -5;
+// let number = -4;
+// let number = -3;
+// let number = -2;
+// let number = -1;
+// let number = 0;
+// let number = 1;
+// let number = 2;
+// let number = 3;
+// let number = 4;
+// let number = 5;
+
+let i = 0;
+while (i < number) {
+  i++;
+  if (i % 2 === 0) {
+    continue;
+  }
+  console.log(i);
+}
+```
+</details>
+
+<details>
+<summary>trace 2</summary>
+
+```js
+'use strict';
+
+let letters = 'xyz';
+// let letters = 'aeiou';
+// let letters = 'zaei';
+// let letters = 'aeiz';
+// let letters = 'xyza';
+// let letters = 'axyz';
+// let letters = '';
+
+let hasAVowel = false;
+
+let index = 0;
+while (index < letters.length) {
+  let nextLetter = letters[index];
+  if ('aeiou'.includes(nextLetter)) {
+    hasAVowel = true;
+    break;
+  }
+  index++;
+}
+
+if (hasAVowel) {
+  console.log('"' + letters + '" has at least one vowel');
+} else {
+  console.log('"' + letters + '" does not have any vowels');
+}
+
+```
+</details>
+
+<details>
+<summary>trace 3</summary>
+
+```js
+'use strict';
+
+let letters = 'xyz';
+// let letters = 'aeiou';
+// let letters = 'zaei';
+// let letters = 'aeiz';
+// let letters = 'xyza';
+// let letters = 'axyz';
+// let letters = '';
+
+let noVowels = true;
+
+let index = 0;
+while (index < letters.length) {
+  let nextLetter = letters[index];
+  if ('aeiou'.includes(nextLetter)) {
+    noVowels = false;
+    break;
+  }
+  index++;
+}
+
+if (noVowels) {
+  console.log('"' + letters + '" has no vowels');
+} else {
+  console.log('"' + letters + '" has at least one vowel');
+}
+```
+</details>
+
+# `for-of`
+
+The `for-of` loop is a convenient syntax for iterating through a string one
+character at a time. You will declare a variable in the loop head and it will be
+assigned each character, one after the other.
+
+The loop body will be executed once for each character in the string. With each
+iteration the variable will be re-declared and reassigned with the next
+character in the array. You can use the variable however you like inside the
+loop body.
+
+```js
+'use strict';
+console.log('-- for-of --');
+
+let input = null;
+while (input === null) {
+  input = prompt('enter something');
+}
+
+for (let character of input) {
+  alert(character);
+}
+
+// input has not been changed!
+alert(input + '!');
+```
+
+---
+
+## Using `for-of`
+
+Understanding how a `for-of` loop works is not so difficult, but using them in a
+program can get tricky. Programs that use _iteration_ can be complicated to
+understand, even for experienced programmers!
+
+Here are a few small programs to give you an idea of what's possible.
+
+<details>
+<summary>🥚 reverse a string</summary>
+
+```js
+'use strict';
+console.log('-- for-of: reverse a string --');
+
+let input = null;
+while (input === null) {
+  input = prompt('enter something');
+}
+
+let reversed = '';
+for (let character of input) {
+  reversed = character + reversed;
+}
+
+alert(input + ' -> ' + reversed);
+```
+
+</details>
+<details>
+<summary>🥚 remove vowels</summary>
+
+```js
+'use strict';
+console.log('-- for-of: remove vowels --');
+
+let input = null;
+while (input === null) {
+  input = prompt('enter something, all vowels will be removed');
+}
+
+let noVowels = '';
+for (let character of input) {
+  if ('aeiouAEIOU'.includes(character)) {
+    continue;
+  }
+  noVowels = noVowels + character;
+}
+
+alert(input + ' -> ' + noVowels);
+```
+
+</details>
+<details>
+<summary>🥚 check for vowels</summary>
+
+```js
+'use strict';
+console.log('-- for-of: check for vowels --');
+
+let input = null;
+while (input === null) {
+  input = prompt(
+    'enter something, the program will check if it has any vowels',
+  );
+}
+
+let hasVowels = false;
+for (let character of input) {
+  if ('aeiouAEIOU'.includes(character)) {
+    hasVowels = true;
+    break;
+  }
+}
+
+if (hasVowels) {
+  alert('"' + input + '" has vowels');
+} else {
+  alert('"' + input + '" does not have vowels');
+}
+```
+
+</details>
+
+## Practice Problems
+
+<details>
+<summary>blanks 1</summary>
+
+```js
+'use strict';
+
+let normalPhrase = null;
+while (normalPhrase === null) {
+  normalPhrase = prompt('enter something to flipflop');
+}
+
+let previous = '';
+let flipFlopped = '';
+for (let current of normalPhrase) {
+  if (previous !== '') {
+    flipFlopped = flipFlopped + current + previous;
+    previous = '';
+  } else {
+    previous = current;
+  }
+}
+if (flipFlopped.length < normalPhrase.length) {
+  flipFlopped = flipFlopped + normalPhrase[normalPhrase.length - 1];
+}
+
+alert(flipFlopped);
+```
+</details>
+
+<details>
+<summary>blanks 2</summary>
+
+```js
+'use strict';
+
+let input = null;
+while (input === null) {
+  input = prompt(
+    'enter some text, the program will check if it has any spaces',
+  );
+}
+
+let hasASpace = false;
+
+for (let char of input) {
+  if (char === ' ') {
+    hasASpace = true;
+    break;
+  }
+}
+
+if (hasASpace) {
+  alert('"' + input + '" has at least one space');
+} else {
+  alert('"' + input + '" does not have any spaces');
+}
+
+```
+</details>
+
+<details>
+<summary>blanks 3</summary>
+
+```js
+
+'use strict';
+
+let input = null;
+while (input === null) {
+  input = prompt(
+    'enter some text, the program will check if it has any spaces',
+  );
+}
+
+let noSpaces = true;
+
+for (let letter of input) {
+  if (letter === ' ') {
+    noSpaces = false;
+    break;
+  }
+}
+
+if (noSpaces) {
+  alert('"' + input + '" has no spaces');
+} else {
+  alert('"' + input + '" has at least one space');
+}
+```
+</details>
+
+<details>
+<summary>blanks 4</summary>
+
+```js
+'use strict';
+
+let phrase = '';
+while (phrase === '' || phrase === null) {
+  phrase = prompt('enter some text');
+}
+
+let noRepeats = '';
+for (let character of phrase) {
+  if (!noRepeats.includes(character)) {
+    noRepeats = noRepeats + character;
+  }
+}
+
+alert('"' + phrase + ' -> "' + noRepeats + '"');
+```
+</details>
+
+<details>
+<summary>blanks 5</summary>
+
+```js
+'use strict';
+
+let input = null;
+
+while (true) {
+  input = prompt(
+    'enter something with at least one space, the spaces will be removed',
+  );
+
+  if (input === null) {
+    alert('no escape');
+    continue;
+  }
+  if (input === '') {
+    alert('gotta enter something');
+    continue;
+  }
+  if (!input.includes(' ')) {
+    alert('there must be a space!');
+    continue;
+  }
+
+  break;
+}
+
+let spaceless = '';
+for (let char of input) {
+  if (char !== ' ') {
+    spaceless = spaceless + char;
+  }
+}
+
+alert(input + ' -> ' + spaceless);
+```
+</details>
+
+<details>
+<summary>parsons 1</summary>
+
+```js
+'use strict';
+
+/* this exercise has 0 extra lines */
+
+/* parsons-collapse: hint
+
+  1. declare and initialize the animal
+  2. declare and initialize empty string
+  3. declare and the boolean flag
+  4. iterate through the characters of the string
+    a. if flag is true true, concatenate as upper case
+    b. else concatenate as lower case
+    c. toggle the flag variable
+  5. compare the string to the expected output
+
+*/
+
+let before = 'camel';
+
+let after = '';
+
+let upperCase = false;
+for (let char of before) {
+  if (upperCase) {
+    after = after + char.toUpperCase();
+  } else {
+    after = after + char.toLowerCase();
+  }
+  upperCase = !upperCase;
+}
+
+console.log(after === 'cAmEl');
+
+```
+</details>
+
+<details>
+<summary>parsons 2</summary>
+
+```js
+'use strict';
+
+/* this exercise has 4 distracting lines */
+
+/* parsons-collapse: hint
+
+  1. declare variable with string to double
+  2. declare variable with new empty data
+  3. iterate through each character in the string
+    i. append the character twice to the new data
+  4. compare the doubled string to the expected value
+
+*/
+
+let string = '_-|-_';
+
+let doubled = '';
+for (let character of string) {
+  doubled = doubled + character + character;
+}
+
+console.log(doubled === '__--||--__');
+
+// begin distractors
+
+console.log(doubled === '_-|-__-|-_'); // distractor
+
+for (let character in string) { // distractor
+for (let character in doubled) { // distractor
+doubled = character + character; // distractor
+```
+
+</details>
+
+<details>
+<summary>parsons 3</summary>
+
+```js
+'use strict';
+
+/* this exercise has 3 extra lines */
+/* parsons-collapse: hint
+
+  1. declare and initialize the text
+  2. declare and initialize the flag
+  3. declare and initialize the vowels
+  4. iterate through the text characters
+    a. if a character is a vowel
+      1. toggle the flag
+      2. leave the loop
+  5. compare the output to the expected value
+
+*/
+
+let text = 'xkcd';
+
+let hasVowel = false;
+
+let vowels = 'aeiou';
+for (let char of text) {
+  if (vowels.includes(char)) {
+    hasVowel = true;
+    break;
+  }
+}
+
+console.log(hasVowel === false);
+
+// -------
+
+console.log(hasVowel === true); // distractor
+continue; // distractor
+hasVowel === true; // distractor
+```
+
+</details>
+
+
+<details>
+<summary>parsons 4</summary>
+
+```js
+'use strict';
+
+/* this exercise has 3 extra lines */
+
+/* parsons-collapse: hint
+
+  1. declare a variable with the whole alphabet
+  2. declare a variable with only vowels
+  3. declare a variable to store the output
+  4. iterate through each letter of the alphabet
+    a. if it is NOT a vowel
+      append it to the output
+  5. compare the final value to the expected value
+
+*/
+
+let before = 'abcdefghijklmnopqrstuvwxyz';
+
+let vowels = 'aeiou';
+
+let after = '';
+for (let letter of before) {
+  if (!vowels.includes(letter)) {
+    after = after + letter;
+  }
+}
+
+console.log(after === 'bcdfghjklmnpqrstvwxyz');
+
+// -------------------
+
+if (vowels.includes(letter)) { // distractor
+for (let character of before) { // distractor
+continue; // distractor
+```
+
+</details>
+
+
+<details>
+<summary>parsons 5</summary>
+
+```js
+'use strict';
+
+/* this exercise has 4 distracting lines */
+
+/* parsons-collapse: hint
+
+  1. declare variable with string to reverse
+  2. declare variable with new empty string
+  3. iterate through each character in the string
+    i. append each character to the beginning of the new string
+  4. compare the reversed string to the expected value
+
+*/
+
+let languageName = 'JavaScript';
+
+let reversedName = '';
+for (let character of languageName) {
+  reversedName = character + reversedName;
+}
+
+console.log(reversedName === 'tpircSavaJ');
+
+// begin distractors
+
+console.log(reversedName === 'ScriptJava'); // distractor
+console.log(reversedName === 'TpirCsavaj'); // distractor
+
+for (character of languageName) { // distractor
+reversedName = reversedName + character; // distractor
+```
+</details>
+
+
+<details>
+<summary>trace 1</summary>
+
+```js
+'use strict';
+
+let letters = 'xyz';
+// let letters = 'aeiou';
+// let letters = 'zaei';
+// let letters = 'aeiz';
+// let letters = 'xyza';
+// let letters = 'axyz';
+// let letters = '';
+
+let noVowels = true;
+
+for (let letter of letters) {
+  if ('aeiou'.includes(letter)) {
+    noVowels = false;
+    break;
+  }
+}
+
+if (noVowels) {
+  console.log('"' + letters + '" has no vowels');
+} else {
+  console.log('"' + letters + '" has at least one vowel');
+}
+
+```
+</details>
+
+<details>
+<summary>write me 1</summary>
+
+```js
+'use strict';
+
+let text = null;
+while (text === null) {
+  text = prompt('enter some text, it will be mirrored');
+}
+
+let mirrored = '|';
+for (let character of text) {
+  mirrored = character + mirrored + character;
+}
+
+alert(mirrored);
+```
+</details>
+
+<details>
+<summary>write me 2</summary>
+
+```js
+'use strict';
+
+let input = null;
+
+let hasSpaces = false;
+while (!hasSpaces) {
+  input = prompt(
+    'enter something with at least one space, the spaces will be removed',
+  );
+
+  if (input === null) {
+    alert('no escape');
+  } else if (input === '') {
+    alert('gotta enter something');
+  } else if (!input.includes(' ')) {
+    alert('there must be a space!');
+  } else {
+    hasSpaces = true;
+  }
+}
+
+let spaceless = '';
+for (let character of input) {
+  if (character === ' ') {
+    continue;
+  }
+  spaceless = spaceless + character;
+}
+
+alert(input + ' -> ' + spaceless);
+```
+</details>
+
+
+
+
+
+
+
+
+
+
